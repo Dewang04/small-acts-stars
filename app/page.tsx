@@ -96,7 +96,7 @@ setSubmitted(true)
 
 setSavedDates((prev: any) => [...new Set([...prev,todayKey])])
 
-setEntries(prev => ({
+setEntries((prev: any) => ({
 ...prev,
 [todayKey]: {
 kindness: good,
