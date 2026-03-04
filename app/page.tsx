@@ -125,7 +125,7 @@ date: todayKey,
 message: messageFromTheStars
 })
 
-setEntries(prev: any) => ({
+setEntries((prev: any) => ({
 ...prev,
 [todayKey]: {
 ...(prev[todayKey] || {}),
