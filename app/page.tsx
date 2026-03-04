@@ -94,7 +94,7 @@ message: message
 
 setSubmitted(true)
 
-setSavedDates(prev => [...new Set([...prev,todayKey])])
+setSavedDates((prev: any) => [...new Set([...prev,todayKey])])
 
 setEntries(prev => ({
 ...prev,
@@ -150,7 +150,7 @@ setLearnText("")
 setMessage("")
 setSubmitted(false)
 
-setSavedDates(prev => prev.filter(d => d !== todayKey))
+setSavedDates((prev: any) => prev.filter((d:any) => d !== todayKey))
 
 }
 
