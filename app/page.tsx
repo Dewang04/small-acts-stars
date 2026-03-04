@@ -44,8 +44,8 @@ const { data } = await supabase
 
 if(data){
 
-let map={}
-let dates=[]
+let map: any = {}
+let dates: any[] = []
 
 data.forEach(d=>{
 map[d.date]=d
