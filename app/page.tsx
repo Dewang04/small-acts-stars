@@ -27,8 +27,8 @@ const [submitted,setSubmitted]=useState(false)
 
 const [calendarOpen,setCalendarOpen]=useState(false)
 const [savedDates,setSavedDates]=useState<any[]>([])
-const [entries,setEntries]=useState<any[]>([])
-const [viewEntry,setViewEntry]=useState(null)
+const [entries,setEntries]=useState<any>({})
+const [viewEntry,setViewEntry]=useState<any>(null)
 
 const [month,setMonth]=useState(new Date(today.getFullYear(),today.getMonth(),1))
 
@@ -157,7 +157,7 @@ setSavedDates(prev => prev.filter(d => d !== todayKey))
 
 
 // OPEN DAY
-function openDay(date){
+function openDay(date: any){
 
 if(!date) return
 
@@ -199,7 +199,7 @@ const lastDay = new Date(month.getFullYear(), month.getMonth()+1,0)
 const start = firstDay.getDay()
 const total = lastDay.getDate()
 
-let days=[]
+let days:any[]=[]
 
 for(let i=0;i<start;i++){
 days.push(null)
