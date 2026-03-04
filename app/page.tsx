@@ -26,8 +26,8 @@ const [message,setMessage]=useState("")
 const [submitted,setSubmitted]=useState(false)
 
 const [calendarOpen,setCalendarOpen]=useState(false)
-const [savedDates,setSavedDates]=useState([])
-const [entries,setEntries]=useState({})
+const [savedDates,setSavedDates]=useState<any[]>([])
+const [entries,setEntries]=useState<any[]>([])
 const [viewEntry,setViewEntry]=useState(null)
 
 const [month,setMonth]=useState(new Date(today.getFullYear(),today.getMonth(),1))
