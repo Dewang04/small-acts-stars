@@ -217,7 +217,7 @@ const days = generateCalendarDays()
 
 
 
-function getIcon(date){
+function getIcon(date: any){
 
 if(!date) return null
 
